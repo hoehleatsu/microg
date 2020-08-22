@@ -1,5 +1,5 @@
 os: linux
-dist: xenial
+dist: focal
 language: android
 before_deploy: 
   - git config --local user.name "$github_name"
@@ -15,7 +15,7 @@ script:
 deploy:
       provider: releases
       token: $github_token
-      file: play-services-core/build/outputs/apk/*/release/*.apk
+      file: "./play-services-core/build/outputs/apk/*/release/*.apk"
       file_glob: true
       skip_cleanup: true
       on:
