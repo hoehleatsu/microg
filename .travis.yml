@@ -15,7 +15,7 @@ script:
 deploy:
       provider: releases
       token: $github_token
-      file: play-services-core/build/outputs/apk/*/
+      file: play-services-core/build/outputs/apk/*/release/*.apk
       file_glob: true
       skip_cleanup: true
       on:
